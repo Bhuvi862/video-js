@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video js</title>
+  <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
+  <style type="text/css">
+      .video-js {
+  width: 800px;
+  height: 450px;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin:0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size:17px;
+  color:black;
+  line-height:1.6;
+}
+
+#showcase{
+  background-image:url('https://images.pexels.com/photos/6442120/pexels-photo-6442120.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+#showcase h1{
+  font-size:50px;
+  line-height:1.2;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+#showcase .button{
+  font-size:18px;
+  text-decoration:none;
+  color:#926239;
+  border:#926239 1px solid;
+  padding:10px 20px;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+#showcase .button:hover{
+  background:black;
+  color:deeppink;
+}
+
+#section-a{
+  padding:20px;
+  background:#926239;
+  color:#fff;
+  text-align:center;
+}
+
+#section-b{
+  padding:20px;
+  background:#f4f4f4;
+  text-align:center;
+}
+
+#section-c{
+  display:flex;
+}
+
+#section-c div{
+  padding:20px;
+}
+
+#section-c .box-1, #section-c .box-3{
+  background:#926239;
+  color:#fff;
+}
+
+#section-c .box-2{
+  background:#f9f9f9;
+}
+
+
+
+.vjs-custom-theme {
+  .vjs-control-bar{
+    background-color: transparent !important;
+  }
+  .vjs-big-play-button {
+    opacity: 0 !important;
+  }
+  .vjs-volume-control {
+    align-items: center !important;
+  }
+  
+  .vjs-play-progress:before {
+    top: -4px !important;
+  }
+  .vjs-fullscreen-control {
+    .vjs-icon-placeholder {
+      &:before {
+        line-height: 30px;
+      }
+    }
+  }
+  button {
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .vjs-progress-control .vjs-progress-holder {
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.25);
+    height: 1px;
+  }
+  .vjs-progress-control {
+    &:hover {
+      .vjs-play-progress:before {
+        top: -7px !important;
+      }
+    }
+  }
+
+  .vjs-control-bar {
+    height: 54px;
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: visibility 0.1s, opacity 0.1s;
+    -o-transition: visibility 0.1s, opacity 0.1s;
+    transition: visibility 0.1s, opacity 0.1s;
+  }
+  .vjs-volume-panel {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+    display: flex;
+    align-items: center;
+  }
+
+  .vjs-fullscreen-control {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 5;
+    order: 5;
+  }
+  .vjs-picture-in-picture-control,
+  .vjs-remaining-time {
+    display: none;
+  }
+  .vjs-play-control {
+    width: 5em !important;
+  }
+  .vjs-play-control .vjs-icon-placeholder::before {
+    font-size: 13px;
+    letter-spacing: 0.16px;
+    content: "Play" !important;
+    font-family: sans-serif;
+    line-height: 30px;
+  }
+
+  .vjs-play-control.vjs-playing .vjs-icon-placeholder::before {
+    content: "Pause" !important;
+    font-family: sans-serif;
+  }
+}
+
+
+<video src="http://www.w3schools.com/html/mov_bbb.mp4" id="myvideo" width="320" height="240" controls style="background:black">
+</video>
+
+
+
+  </style>
+
+</head>
+<body>
+<header id="showcase">
+    <h1>The Final Task</h1>
+    <video class="video-js vjs-custom-theme " data-setup="{}" autoplay muted loop controls>
+         <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+ </video>
+  
+    <a href="#" class="button">Done</a>
+  </header>
+ 
+<script src="https://media.istockphoto.com/videos/young-happy-girl-communicates-online-and-picks-up-her-little-dog-video-id1267640930"></script>
+<script src="main.js">
+</script>
+
+
+  
+</body>
+</html>
